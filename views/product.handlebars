@@ -1,0 +1,54 @@
+<h1 class="text-center">Products</h1>
+
+
+
+<form action="/product" method="POST" class="mb-4">
+<div class="form-group">
+    <label>Name: </label>
+    <input type="text" name="name" class="form-control">
+</div>
+<div class="form-group">
+    <label>Raw Price: </label>
+    <input type="number" name="rawPrice" class="form-control">
+</div>
+<div class="form-group">
+    <label>Price: </label>
+    <input type="number" name="price" class="form-control">
+</div>
+<div class="form-group">
+    <label>Code: </label>
+    <input type="text" name="code" class="form-control">
+</div>
+<div class="form-group">
+    <label>color: </label>
+    <input type="text" name="color" class="form-control">
+</div>
+
+<div class="form-group">
+    <label>Category ID: </label>
+    <input type="number" name="categoryid" class="form-control">
+</div>
+<div class="form-group">
+    <label>Description: </label>
+    <input type="text" name="description" class="form-control">
+</div>
+<div class="form-group">
+    <label>Stock Count: </label>
+    <input type="number" name="stockCount" class="form-control">
+</div> 
+<div class="form-group">
+    <label>Expiration Date: </label>
+    <input type="text" name="expirationDate" class="form-control">
+</div>
+<input type="submit" value="Add Member" class="btn btn-primary btn-block mt-4">
+</form>
+
+
+<ul class="list-group">
+    {{#each memebers}}
+    <li class="list-group-item">{{this.name}}=> rawPrice: {{this.rawPrice}}, price: {{this.price}}, code: {{this.code}}, color: {{this.color}}, category id: {{this.categoryid}}, description: {{this.description}}, stockCount: {{this.stockCount}} </li>
+    {{/each}}
+</ul>
+
+<a href="/product/3" class="btn btn-primary mt-4"> Visit Api</a>
+

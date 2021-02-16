@@ -1,0 +1,21 @@
+<h1 class="text-center">App</h1>
+
+
+
+<form action="/category" method="POST" class="mb-4">
+<div class="form-group">
+    <label>Name: </label>
+    <input type="text" name="name" class="form-control">
+</div>
+<input type="submit" value="Add Member" class="btn btn-primary btn-block mt-4">
+</form>
+
+
+<ul class="list-group">
+    {{#each memebers}}
+    <li class="list-group-item">{{this.name}} </li>
+    {{/each}}
+</ul>
+
+<a href="/api/members" class="btn btn-primary mt-4"> Visit Api</a>
+
